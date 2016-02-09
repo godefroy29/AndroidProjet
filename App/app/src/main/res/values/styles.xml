@@ -1,7 +1,11 @@
 <resources>
 
 
-    <style name="PlopTheme" parent="Theme.AppCompat.Light.NoActionBar" >
+    <style name="PlopTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:textColorPrimary">@color/abc_primary_text_material_light_1</item>
     </style>
+
+    <style name="PlopTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="PlopTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

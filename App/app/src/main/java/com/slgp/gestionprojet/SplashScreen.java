@@ -44,6 +44,7 @@ public class SplashScreen extends Activity {
         btnLocal.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
                 //TODO : passer à l'activité suivante
+                startActivity(accueil);
                 //TODO : fermer celle ci
             }
         });
@@ -51,6 +52,7 @@ public class SplashScreen extends Activity {
         btnConnexion.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
                 //TODO : passer à l'activité suivante
+                startActivity(accueil);
                 //TODO : fermer celle ci
             }
         });
@@ -60,7 +62,7 @@ public class SplashScreen extends Activity {
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         btnLocal = (Button) findViewById(R.id.btnLocal);
         btnConnexion = (Button) findViewById(R.id.btnConnexion);
-        //accueil = Intent(this, plop.class);
+        accueil = new Intent(this, Accueil.class);
 
     }
 }
