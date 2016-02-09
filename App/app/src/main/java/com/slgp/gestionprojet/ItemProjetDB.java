@@ -5,7 +5,7 @@ import java.sql.Date;
 /**
  * Created by godef on 09/02/2016.
  */
-public class clsItemProjet {
+public class ItemProjetDB {
 
     private int id_projet;
     private String pro_titre;

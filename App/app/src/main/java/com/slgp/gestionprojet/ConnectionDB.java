@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Created by godef on 09/02/2016.
  */
-public class clsConnection {
+public class ConnectionDB {
     //String Host, String Port, String db_userid, String db_password
     public Connection dbConnect() {
         try {
