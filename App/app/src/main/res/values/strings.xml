@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">GestionProjet</string>
+    <string name="host">213.186.33.40</string>
+    <string name="db_userid">menkussogwm1isi</string>
+    <string name="db_password">Projetm1</string>
+</resources>
