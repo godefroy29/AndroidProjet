@@ -43,17 +43,17 @@ public class SplashScreen extends Activity {
     private void setListener() {
         btnLocal.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
-                //TODO : passer à l'activité suivante
+                //TODO : enregistrer qu'on est en hors connexion
+                finish();
                 startActivity(accueil);
-                //TODO : fermer celle ci
             }
         });
 
         btnConnexion.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
-                //TODO : passer à l'activité suivante
+                //TODO : enregistrer qu'on s'est connecté
+                finish();
                 startActivity(accueil);
-                //TODO : fermer celle ci
             }
         });
     }

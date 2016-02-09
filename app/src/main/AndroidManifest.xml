@@ -18,11 +18,18 @@
         <activity
             android:name=".SelectionProjet"
             android:label="@string/title_activity_selection_projet"
-            android:theme="@style/PlopTheme">
-        </activity>
+            android:theme="@style/PlopTheme" />
         <activity
             android:name=".Accueil"
             android:label="@string/title_activity_accueil"
+            android:theme="@style/PlopTheme" />
+        <activity
+            android:name=".TacheAccueil"
+            android:label="@string/title_activity_tache_accueil"
+            android:theme="@style/PlopTheme" />
+        <activity
+            android:name=".NotificationAccueil"
+            android:label="@string/title_activity_notification_accueil"
             android:theme="@style/PlopTheme"></activity>
     </application>
 
