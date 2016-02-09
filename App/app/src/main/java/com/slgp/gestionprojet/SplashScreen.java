@@ -37,7 +37,7 @@ public class SplashScreen extends Activity {
     private boolean testConnection() {
         return true;
     }
-
+//plop
     private void setListener() {
         btnLocal.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
