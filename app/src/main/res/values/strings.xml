@@ -12,4 +12,6 @@
     <string name="title_activity_tache_accueil">TacheAccueil</string>
     <string name="title_activity_notification_accueil">NotificationAccueil</string>
     <string name="sharedPrefs">mySharedPrefs</string>
+    <string name="title_activity_projet_accueil">ProjetAccueil</string>
+    <string name="titre">Titre</string>
 </resources>

@@ -10,16 +10,17 @@ import java.util.ArrayList;
  */
 public class ClientDB {
 
-    private Connection conn;
+    private ConnectionDB conn;
 
     public ClientDB(){
-        this.conn = new ConnectionDB().dbConnect();
+        this.conn = new ConnectionDB();
     }
 
     public ArrayList<ItemClientDB> getListClient(){
         ArrayList<ItemClientDB> myList = null;
         try{
-            Statement statement = conn.createStatement();
+            conn.dbConnect();
+            Statement statement = conn.conn.createStatement();
             String strSql = "select * ";
             strSql = strSql + "from T_Client;";
             ResultSet rs = statement.executeQuery(strSql);
@@ -32,6 +33,23 @@ public class ClientDB {
         }catch(Exception e){
 
         }
+        conn.dbClose();
         return myList;
+    }
+
+    public String getNbClient(){
+        ArrayList<ItemClientDB> myList = null;
+        try{
+            conn.dbConnect();
+            Statement statement = conn.conn.createStatement();
+            String strSql = "select * from T_Client;";
+            ResultSet rs = statement.executeQuery(strSql);
+            conn.dbClose();
+            return "Done";
+        }catch(Exception e){
+            return "Fail";
+        }
+
+
     }
 }

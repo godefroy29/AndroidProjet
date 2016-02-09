@@ -19,6 +19,7 @@ public class SplashScreen extends Activity {
     private Button btnLocal;
     private Button btnConnexion;
     private Intent accueil;
+    private Intent projetAccueil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,11 +38,24 @@ public class SplashScreen extends Activity {
         }
         btnLocal.setVisibility(View.VISIBLE);
         progressBar.setVisibility(View.INVISIBLE);
+
+        setTest();
+    }
+
+    private void setTest() {
+        Button btnTest = (Button) findViewById(R.id.btnLocal);
+
+        btnTest.setOnClickListener(new Button.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(projetAccueil);
+            }
+        });
     }
 
     private boolean testConnection() {
-        Connection conn = new ConnectionDB().dbConnect();
-        return conn != null;
+        //Connection conn = new ConnectionDB().dbConnect();
+        //return conn != null;
+        return true;
     }
 
     private void setListener() {
@@ -69,6 +83,9 @@ public class SplashScreen extends Activity {
         btnLocal = (Button) findViewById(R.id.btnLocal);
         btnConnexion = (Button) findViewById(R.id.btnConnexion);
         accueil = new Intent(this, Accueil.class);
+
+        //test
+        projetAccueil = new Intent(this, ProjetAccueil.class);
 
     }
 }

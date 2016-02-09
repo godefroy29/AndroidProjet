@@ -1,6 +1,8 @@
 package com.slgp.gestionprojet;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -19,6 +21,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Accueil extends AppCompatActivity {
 
@@ -56,8 +59,15 @@ public class Accueil extends AppCompatActivity {
             textView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent selectionProjet = new Intent(getActivity(), SelectionProjet.class);
-                    startActivity(selectionProjet);
+                    SharedPreferences prefs = getActivity().getSharedPreferences(getString(R.string.sharedPrefs), Context.MODE_PRIVATE);
+
+                    if(prefs.getBoolean("connected",true)){
+                        Intent selectionProjet = new Intent(getActivity(), SelectionProjet.class);
+                        startActivity(selectionProjet);
+                    }else{
+                        Toast.makeText(getActivity(),"Vous n'êtes pas connecté.", Toast.LENGTH_SHORT).show();
+                    }
+
                 }
             });
             return rootView;

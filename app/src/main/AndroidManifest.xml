@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.slgp.gestionprojet">
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -30,6 +31,10 @@
         <activity
             android:name=".NotificationAccueil"
             android:label="@string/title_activity_notification_accueil"
+            android:theme="@style/PlopTheme" />
+        <activity
+            android:name=".ProjetAccueil"
+            android:label="@string/title_activity_projet_accueil"
             android:theme="@style/PlopTheme"></activity>
     </application>
 
