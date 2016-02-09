@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">GestionProjet</string>
+    <string name="host">213.186.33.40</string>
+    <string name="db_userid">menkussogwm1isi</string>
+    <string name="db_password">Projetm1</string>
+    <string name="connection">Connection</string>
+    <string name="local">Local</string>
+    <string name="title_activity_accueil">Accueil</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_selection_projet">Choix du projet</string>
+</resources>
