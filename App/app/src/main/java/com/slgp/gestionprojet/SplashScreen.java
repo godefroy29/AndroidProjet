@@ -1,6 +1,7 @@
 package com.slgp.gestionprojet;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +15,7 @@ public class SplashScreen extends Activity {
     private ProgressBar progressBar;
     private Button btnLocal;
     private Button btnConnexion;
+    private Intent accueil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +60,7 @@ public class SplashScreen extends Activity {
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         btnLocal = (Button) findViewById(R.id.btnLocal);
         btnConnexion = (Button) findViewById(R.id.btnConnexion);
+        //accueil = Intent(this, plop.class);
 
     }
 }
