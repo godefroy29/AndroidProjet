@@ -1,9 +1,12 @@
 package com.slgp.gestionprojet;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import java.sql.Connection;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -37,13 +40,15 @@ public class SplashScreen extends Activity {
     }
 
     private boolean testConnection() {
-        return true;
+        Connection conn = new ConnectionDB().dbConnect();
+        return conn != null;
     }
 
     private void setListener() {
         btnLocal.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
-                //TODO : enregistrer qu'on est en hors connexion
+                SharedPreferences prefs = getSharedPreferences(getString(R.string.sharedPrefs), Context.MODE_PRIVATE);
+                prefs.edit().putBoolean("connected",false).apply();
                 finish();
                 startActivity(accueil);
             }
@@ -51,7 +56,8 @@ public class SplashScreen extends Activity {
 
         btnConnexion.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
-                //TODO : enregistrer qu'on s'est connecté
+                SharedPreferences prefs = getSharedPreferences(getString(R.string.sharedPrefs), Context.MODE_PRIVATE);
+                prefs.edit().putBoolean("connected",true).apply();
                 finish();
                 startActivity(accueil);
             }
