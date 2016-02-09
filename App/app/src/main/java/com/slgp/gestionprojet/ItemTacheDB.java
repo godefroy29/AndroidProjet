@@ -5,7 +5,7 @@ import java.sql.Date;
 /**
  * Created by godef on 09/02/2016.
  */
-public class clsItemTache {
+public class ItemTacheDB {
 
     private int id_tache;
     private String tac_titre;
