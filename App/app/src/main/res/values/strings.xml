@@ -3,4 +3,6 @@
     <string name="host">213.186.33.40</string>
     <string name="db_userid">menkussogwm1isi</string>
     <string name="db_password">Projetm1</string>
+    <string name="connection">Connection</string>
+    <string name="local">Local</string>
 </resources>
