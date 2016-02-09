@@ -1,4 +1,7 @@
 <resources>
 
 
+    <style name="PlopTheme" parent="Theme.AppCompat.Light.NoActionBar" >
+        <item name="android:textColorPrimary">@color/abc_primary_text_material_light_1</item>
+    </style>
 </resources>
