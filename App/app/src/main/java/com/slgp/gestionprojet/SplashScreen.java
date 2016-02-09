@@ -28,7 +28,7 @@ public class SplashScreen extends Activity {
     }
 
     private void setListener() {
-
+//plop
     }
 
     private void initialize() {
