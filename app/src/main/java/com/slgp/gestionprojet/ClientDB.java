@@ -1,5 +1,6 @@
 package com.slgp.gestionprojet;
 
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -10,17 +11,17 @@ import java.util.ArrayList;
  */
 public class ClientDB {
 
-    private ConnectionDB conn;
+    private ConnectionDB connection;
 
     public ClientDB(){
-        this.conn = new ConnectionDB();
+        this.connection = new ConnectionDB();
     }
-
+/*
     public ArrayList<ItemClientDB> getListClient(){
         ArrayList<ItemClientDB> myList = null;
         try{
-            conn.dbConnect();
-            Statement statement = conn.conn.createStatement();
+            connection.dbConnect();
+            Statement statement = connection.conn.createStatement();
             String strSql = "select * ";
             strSql = strSql + "from T_Client;";
             ResultSet rs = statement.executeQuery(strSql);
@@ -33,22 +34,27 @@ public class ClientDB {
         }catch(Exception e){
 
         }
-        conn.dbClose();
+        connection.dbClose();
         return myList;
-    }
+    }*/
 
     public String getNbClient(){
         ArrayList<ItemClientDB> myList = null;
+        String str="-2";
         try{
-            conn.dbConnect();
-            Statement statement = conn.conn.createStatement();
+            connection.execute();
+            str = connection.test;
+            /*Statement statement = connection.conn.createStatement();
+            str = "3";
             String strSql = "select * from T_Client;";
             ResultSet rs = statement.executeQuery(strSql);
-            conn.dbClose();
-            return "Done";
+            str = "4";
+            connection.dbClose();
+            str = "done";*/
         }catch(Exception e){
-            return "Fail";
+
         }
+        return str;
 
 
     }
