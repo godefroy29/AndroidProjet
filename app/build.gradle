@@ -1,3 +1,4 @@
+/*
 apply plugin: 'com.android.application'
 
 android {
@@ -5,7 +6,7 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "com.slgp.gestionprojet"
+        applicationId "com.slgp.androidprojet"
         minSdkVersion 16
         targetSdkVersion 23
         versionCode 1
@@ -26,3 +27,28 @@ dependencies {
     compile 'com.android.support:design:23.1.1'
     compile files('libs/postgresql-9.4.1207.jar')
 }
+*/
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.5.0'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+
